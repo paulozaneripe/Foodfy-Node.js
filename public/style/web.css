@@ -145,7 +145,7 @@ footer p {
 }
 
 .show .content {
-    display: none;
+    display: block;
 }
 
 @media (max-width: 840px) {
