@@ -1,0 +1,38 @@
+{% extends "layout.njk" %}
+
+{% block style %} <link rel="stylesheet" href="/style/web.css"> {% endblock %}
+
+{% block content %}
+    <main>
+        {% include "web/structures/header.njk" %}
+        <div id="wrapper">
+            <div class="headline">
+                <h1>As melhores receitas</h1>
+                <p>
+                    Aprenda a construir os melhores pratos
+                    com receitas criadas por profissionais
+                    do mundo inteiro.
+                </p>
+            </div>
+            <div id="wrapper-img">
+                <img src="img/chef.svg" alt="Cozinheiro">
+            </div>
+        </div>
+        <div class="popular">
+            <h2>Mais acessadas</h2>
+            <div class="cards">
+                {% for recipe in recipes %}
+                    {% if loop.index0 < 6 %} 
+                        {% include "web/structures/cards.njk" %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    {% include "web/structures/footer.njk" %}
+{% endblock %}
+
+{% block script %} 
+    <script src="/js/menu.js"></script>
+    <script src="/js/cards.js"></script> 
+{% endblock %}

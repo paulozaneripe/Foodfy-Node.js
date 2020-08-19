@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+
+{% block style %}<link rel="stylesheet" href="/style/admin.css">{% endblock %}
+
+{% block content %}
+    {% include "admin/structures/header.njk" %}
+    <main>
+        <form method="POST" action="/admin/recipes" onsubmit="disableEmptyInputs()">
+            <div class="option">
+                <h3>Criando receita</h3>
+                <button type="submit">Salvar receita</button>
+            </div>
+            {%include "admin/structures/inputsAbove.njk" %}
+            {%include "admin/structures/arrays.njk" %}
+            {%include "admin/structures/inputsBelow.njk" %}
+        </form>
+    </main>
+{% endblock %}
+
+{% block script %} <script src="/js/fields.js"></script> {% endblock %}

@@ -1,0 +1,223 @@
+header {
+    background-color: #111111;
+    padding: 26px 0;
+    margin-bottom: 50px;
+}
+
+#logo {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#logo img {
+    display: flex;
+    align-items: center;
+}
+
+
+main {
+    max-width: 960px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.manager h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 30px;
+}
+
+.manager .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto 20px auto;
+}
+
+.manager .card {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+}
+
+.manager .card img{
+    width: 172px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8.57px;
+    margin-right: 20px;
+}
+
+.manager .card h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111111;
+}
+
+.manager .card p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #777777;
+}
+
+.manager .card a {
+    font-weight: bold;
+    font-size: 14px;
+    color: #6558C3;
+}
+
+.show span {
+    display: none;
+}
+
+.show .content {
+    display: block;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    color: #111111;
+}
+
+.option a, .option button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 136px;
+    height: 37px;
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: #6558C3;
+    border-radius: 4px;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    letter-spacing: 0px;
+    outline: none;
+}
+
+
+.option a:hover, .option button:hover {
+    background-color: #FFFFFF;
+    color: #6558C3;
+    border: 1px solid #6558C3;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#buttons button{
+    display: flex;
+    flex-direction: row;
+}
+
+#buttons button:first-child {
+    width: unset;
+    padding: 0 20px;
+    background-color: #DC4747;
+    margin-right: 10px;
+}
+
+#buttons button:first-child:hover {
+    color: #DC4747;
+    background-color: #FFFFFF;
+    border: 1px solid #DC4747;
+}
+
+.item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111111;
+    margin: 30px auto;
+}
+
+.item span {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6558C3;
+    cursor: pointer;
+}
+
+
+input, textarea {
+    outline-offset: -0.5px;
+    outline-color: #AAAAAA;
+    margin-top: 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    padding: 13px;
+    font-size: 16px;
+    width: 100%;
+}
+
+textarea {
+    min-height: 257px;
+    resize: vertical;
+}
+
+@media (max-width: 840px) {
+    .manager h2 {
+        text-align: center;
+    }
+
+    .manager .card {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .manager .card img {
+        width: 100%;
+        margin: 0 auto 10px auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .manager .cards {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .manager h2 {
+        margin-bottom: 0;
+    }
+    
+    .option {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 19px;
+    }
+
+    .option a, .option button {
+        margin: 10px auto 0 auto;
+    }
+
+    .show h3 {
+        font-size: 28px;
+    }
+
+    .show h4 {
+        font-size: 19px;
+    }
+
+    .show img {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    #buttons button{
+        width: 100%;
+    }
+}

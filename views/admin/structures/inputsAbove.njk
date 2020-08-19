@@ -1,0 +1,29 @@
+<section class="fields">
+    <div class="item">
+        <div>Imagem da receita</div>
+        <input 
+        type="url"
+        name="recipe_url"
+        value="{{ recipe.recipe_url }}"
+        placeholder="http://"
+        >
+    </div>
+    <div class="item">
+        <div>Título da receita</div>
+        <input 
+        type="text"
+        name="title"
+        value="{{ recipe.title }}"
+        >
+    </div>
+    <div class="item">
+        <div>Nome do autor</div>
+        <input 
+        type="text"
+        name="author"
+        value="{{ recipe.author }}"
+        >
+    </div>
+    <div class="item">
+        <div>Ingredientes</div>
+        <div id="ingredients">

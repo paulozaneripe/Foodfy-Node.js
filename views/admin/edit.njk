@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block style %}<link rel="stylesheet" href="/style/admin.css">{% endblock %}
+
+{% block content %}
+    {% include "admin/structures/header.njk" %}
+    <main>
+        <form method="POST" action="/admin/recipes?_method=PUT" onsubmit="disableEmptyInputs()">
+            <div class="option">
+                <h3>Editando receita</h3>
+                <div id="buttons">
+                    <button type="submit" form="form-delete">Deletar</button>
+                    <button type="submit">Salvar receita</button>
+                </div>
+            </div>
+            <input type="hidden" name="index" value={{recipe.index}}>
+            {%include "admin/structures/inputsAbove.njk" %}
+            {%include "admin/structures/editArrays.njk" %}
+            {%include "admin/structures/inputsBelow.njk" %}
+        </form>
+        <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+            <input type="hidden" name="index" value={{recipe.index}}>
+        </form>
+    </main>
+{% endblock %}
+
+{% block script %} <script src="/js/fields.js"></script> {% endblock %}

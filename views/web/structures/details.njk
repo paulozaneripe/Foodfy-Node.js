@@ -1,0 +1,41 @@
+<section class="show">
+    <img src="{{ recipe.recipe_url }}" alt="">
+    <h3>{{ recipe.title }}<h3>
+    <p>por {{ recipe.author }}<p>
+    <div class="ingredients">
+        <div class="show-button">
+            <h4>Ingredientes</h4><span class="hideshow 0">mostrar</span>
+        </div>
+        <div class="content">
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="preparation">
+        <div class="show-button">
+            <h4>Modo de preparo</h4><span class="hideshow 1">mostrar</span>
+        </div>
+        <div class="content">
+            <ul>
+                {% for step in recipe.steps %}
+                    <li>{{ step }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="information">
+        <div class="show-button">
+            <h4>Informações adicionais</h4><span class="hideshow 2">mostrar</span>
+        </div>
+        <div class="content">
+            {% if recipe.information != "" %}
+                <p style="white-space: pre-line">{{ recipe.information }}</p>
+            {% else %}   
+                <p>Vazio</p>     
+            {% endif %}
+        </div>
+    </div>
+</section>

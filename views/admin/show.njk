@@ -1,0 +1,14 @@
+{% extends "layout.njk" %}
+
+{% block style %}<link rel="stylesheet" href="/style/admin.css">{% endblock %}
+
+{% block content %}
+    {% include "admin/structures/header.njk" %}
+    <main>
+        <div class="option">
+            <div>Receita: {{ recipe.title }}</div>
+            <a href="/admin/recipes/{{ recipe.index }}/edit">Editar receita</a>
+        </div>
+        {% include "web/structures/details.njk" %}
+    </main>
+{% endblock %}

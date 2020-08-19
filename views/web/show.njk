@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block style %}<link rel="stylesheet" href="/style/web.css">{% endblock %}
+
+{% block content %}
+    <main>
+        {% include "web/structures/header.njk" %}
+        {% include "web/structures/details.njk" %}
+    </main>
+    {% include "web/structures/footer.njk" %}
+    <script>
+        const hideShows = document.querySelectorAll(".hideshow");
+
+        for (let hideShow of hideShows){
+            hideShow.addEventListener("click", function(){
+                if (hideShow.innerHTML === "mostrar") {
+                    hideShow.innerHTML = "esconder"
+                    const id = hideShow.classList[1]
+                    document.getElementsByClassName("content")[id].style.display = 'block'
+                } else if (hideShow.innerHTML === "esconder") { 
+                    hideShow.innerHTML = "mostrar"
+                    const id = hideShow.classList[1]
+                    document.getElementsByClassName("content")[id].style.display = 'none'
+                }
+            })
+        }
+    </script>
+{% endblock %}
+
+{% block script %} <script src="/js/menu.js"></script> {% endblock %}

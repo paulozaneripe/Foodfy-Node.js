@@ -1,0 +1,22 @@
+{% extends "layout.njk" %}
+
+{% block style %}<link rel="stylesheet" href="/style/web.css">{% endblock %}
+
+{% block content %}
+    <main>
+        {% include "web/structures/header.njk" %}
+        <div class="popular">
+            <div class="cards">
+                {% for recipe in recipes %}
+                    {% include "web/structures/cards.njk" %}
+                {% endfor %}
+            </div>    
+        </div>
+    </main>
+    {% include "web/structures/footer.njk" %}
+{% endblock %}
+
+{% block script %} 
+    <script src="/js/menu.js"></script>
+    <script src="/js/cards.js"></script> 
+{% endblock %}

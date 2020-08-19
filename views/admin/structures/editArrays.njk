@@ -1,0 +1,26 @@
+        {% for ingredient in recipe.ingredients %}
+            <div class="ingredient">    
+                <input 
+                class="empty"
+                type="text"
+                name="ingredients[]"
+                value="{{ ingredient }}"
+                >
+            </div>
+        {% endfor %}
+    </div>
+    <span id="add-ingredient">Adicionar novo ingrediente</span>
+</div>
+<div class="item">
+    <div>Modo de preparo</div>
+    <div id="steps">
+        {% for step in recipe.steps %}
+            <div class="step">
+                <input
+                class="empty"
+                type="text"
+                name="steps[]"
+                value="{{ step }}"
+                >
+            </div>
+        {% endfor %}
